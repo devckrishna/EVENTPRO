@@ -3,6 +3,7 @@ const dotenv = require("dotenv");
 const morgan = require("morgan");
 const mongoose = require("mongoose")
 const userRoutes = require('./routes/userRoutes.js');
+const eventRoutes = require("./routes/eventRoutes");
 const uploadRoutes = require('./routes/uploadRoutes.js');
 const { errorHandler, notFound } = require('./utils/errorUtil');
 const path = require("path");
@@ -26,6 +27,7 @@ if (process.env.NODE_ENV === 'development') {
 app.use(express.json());
 
 app.use('/api/users', userRoutes);
+app.use('/api/event/', eventRoutes);
 app.use('/api/upload', uploadRoutes);
 
 // app.get(`/api/config/paypal`, (req, res) => res.send(process.env.PAYPAL_CLIENT_ID));
