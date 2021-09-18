@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 export default function NavBar() {
-  let isUserLoggedIn=true;
   return (
     <nav className="bg-white shadow-lg dark:bg-gray-800 p-3 sticky" >
       <div
@@ -69,6 +68,7 @@ export default function NavBar() {
             
             
             <Link  href='#' className="my-2.5 text-gray-700 dark:text-gray-200 text-4xl md:mx-4 md:my-0"><i class="fas fa-user-circle -my-3.5"></i></Link>
+
 
           </div>
         </div>
