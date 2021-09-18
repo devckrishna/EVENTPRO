@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 export default function NavBar() {
+  let isUserLoggedIn = false;
   return (
     <nav className="bg-white shadow-lg dark:bg-gray-800 p-3 sticky" >
       <div
@@ -39,35 +40,35 @@ export default function NavBar() {
               href="#"
             >Home </Link>
             <Link to="/" href='#' className="my-1 text-gray-700 dark:text-gray-200 hover:text-indigo-500 dark:hover:text-indigo-400 md:mx-4 md:my-0">Events</Link>
-            
-           
 
-             {
-               isUserLoggedIn ?
-               <Link to="/logout"
-               className="my-1 text-gray-700 dark:text-gray-200 hover:text-indigo-500 dark:hover:text-indigo-400 md:mx-4 md:my-0"
-               href="#">
-             <button
-               class="bg-red-500 text-white active:bg-red-600 font-bold uppercase text-xs px-4 py-2 rounded-full shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-               type="button">
-                   logout
-               </button>
-               </Link>
-               :
-               <Link to="/login"
-               className="my-1 text-gray-700 dark:text-gray-200 hover:text-indigo-500 dark:hover:text-indigo-400 md:mx-4 md:my-0"
-               href="#">
-             <button
-               class="bg-purple-500 text-white active:bg-purple-600 font-bold uppercase text-xs px-4 py-2 rounded-full shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-               type="button">
-                 Login / SignUp
-               </button>
-               </Link>
-             }
 
-            
-            
-            <Link  href='#' className="my-2.5 text-gray-700 dark:text-gray-200 text-4xl md:mx-4 md:my-0"><i class="fas fa-user-circle -my-3.5"></i></Link>
+
+            {
+              isUserLoggedIn ?
+                <Link to="/logout"
+                  className="my-1 text-gray-700 dark:text-gray-200 hover:text-indigo-500 dark:hover:text-indigo-400 md:mx-4 md:my-0"
+                  href="#">
+                  <button
+                    class="bg-red-500 text-white active:bg-red-600 font-bold uppercase text-xs px-4 py-2 rounded-full shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    type="button">
+                    logout
+                  </button>
+                </Link>
+                :
+                <Link to="/login"
+                  className="my-1 text-gray-700 dark:text-gray-200 hover:text-indigo-500 dark:hover:text-indigo-400 md:mx-4 md:my-0"
+                  href="#">
+                  <button
+                    class="bg-purple-500 text-white active:bg-purple-600 font-bold uppercase text-xs px-4 py-2 rounded-full shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    type="button">
+                    Login / SignUp
+                  </button>
+                </Link>
+            }
+
+
+
+            <Link href='#' className="my-2.5 text-gray-700 dark:text-gray-200 text-4xl md:mx-4 md:my-0"><i class="fas fa-user-circle -my-3.5"></i></Link>
 
 
           </div>
