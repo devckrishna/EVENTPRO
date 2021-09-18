@@ -6,9 +6,9 @@ class SingleEvent extends React.Component{
 
     render(){
         return(
-           <div className='lg:bg-white flex lg:flex-row md:flex-col sm:flex-col   justify-between items-between p-6 w-7/12 rounded-2xl h-80'>
-               <div className='left  flex  flex-col justify-center items-center'>
-                   <img className='rounded-2xl w-80 object-cover h-80' src='https://happifiers-cms-uploads.happify.com/cms_uploads/en_US/img/happifiers/key-to-productivity-1_24c9d0e.jpg'></img>
+           <div className='bg-gray-100 shadow-sm flex flex-row    xl:justify-evenly justify-between items-between p-6 w-7/12 rounded-2xl h-72'>
+               <div className='left  flex  w-80 flex-col justify-center items-center'>
+                   <img className='rounded-2xl    object-cover h-80' src='https://happifiers-cms-uploads.happify.com/cms_uploads/en_US/img/happifiers/key-to-productivity-1_24c9d0e.jpg'></img>
                </div>
                <div className='right w-6/12 flex flex-col justify-around'>
                    <EventHeader></EventHeader>
