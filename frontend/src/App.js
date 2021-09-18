@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
@@ -11,6 +12,7 @@ import LandingScreen from "./screens/LandingScreen";
 import HomeScreen from "./screens/HomeScreen";
 import LoginScreen from "./screens/LoginScreen";
 import SignUpScreen from "./screens/SignUpScreen";
+
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,6 +36,7 @@ function App() {
     };
   });
   return (
+
     <Router>
       <NavBar toggle={toggle} />
       <Dropdown isOpen={isOpen} toggle={toggle} />
