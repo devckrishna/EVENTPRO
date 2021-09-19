@@ -12,7 +12,7 @@ import LandingScreen from "./screens/LandingScreen";
 import HomeScreen from "./screens/HomeScreen";
 import LoginScreen from "./screens/LoginScreen";
 import SignUpScreen from "./screens/SignUpScreen";
-
+import AddEvent from "./screens/AddEvent"
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,12 +47,16 @@ function App() {
         <Route path="/home">
           <HomeScreen />
         </Route>
-        <Route path='/signup' >
-          <SignUpScreen />
-        </Route>
         <Route path='/login'>
           <LoginScreen />
         </Route>
+        <Route to="/create">
+          <AddEvent />
+        </Route>
+        <Route path='/signup' >
+          <SignUpScreen />
+        </Route>
+
       </Switch>
     </Router>
   );

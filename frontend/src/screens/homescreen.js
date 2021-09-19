@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { listEvents } from '../actions/eventActions';
 import SingleEvent from "../components/SingleEvent"
 
@@ -21,6 +22,9 @@ export default function HomeScreen() {
       <div className="flex justify-center">
         <h1>events</h1>
       </div>
+      <Link to="/create">
+        <button>create</button>
+      </Link>
       <div className="flex flex-col items-center">
         {
           events.data != null ? events.data.map((data) => {
