@@ -7,20 +7,17 @@ import SingleEvent from "../components/SingleEvent"
 export default function HomeScreen() {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.eventList);
-  // const user = useSelector((state) => {
-  //   console.log(state)
-  //   return state.userLogin
-  // })
+
   const { events, loading } = data;
-  // const { userInfo } = user;
-  // console.log(userInfo.email)
+  
   useEffect(() => {
     dispatch(listEvents());
   }, [dispatch]);
   return (
     <>
+      
       <div className="flex justify-center">
-        <h1>events</h1>
+    
       </div>
       <Link to="/create">
         <button>create</button>

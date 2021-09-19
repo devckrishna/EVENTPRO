@@ -51,6 +51,11 @@ export default function NavBar() {
 
         <div className="items-center md:flex">
           <div className="flex flex-col md:flex-row md:mx-6">
+          <Link to="/create"
+              className="my-1 text-gray-700 dark:text-gray-200 hover:text-indigo-500 font-bold uppercase dark:hover:text-indigo-400 md:mx-4 md:my-0"
+              href="#"
+            >Host My Event </Link>
+            
             <Link to="/"
               className="my-1 text-gray-700 dark:text-gray-200 hover:text-indigo-500 dark:hover:text-indigo-400 md:mx-4 md:my-0"
               href="#"
@@ -89,6 +94,10 @@ export default function NavBar() {
                 </Link>
 
             }
+             <Link to="/events"
+              className="my-1 text-gray-700 dark:text-gray-200 hover:text-gray-800 dark:hover:text-indigo-400 md:mx-4 md:my-0"
+              href="#"
+            ><i class="far text-3xl fa-user-circle"></i> </Link>
 
           </div>
         </div>
