@@ -12,6 +12,7 @@ module.exports = {
   },
   variants: {
     extend: {},
+    textColor: ['responsive', 'hover', 'focus', 'group-hover'],
     boxShadow: ['responsive', 'group-hover', 'focus-within', 'hover', 'focus', 'active'],
     scale: ['responsive', 'hover', 'focus', 'active'],
     backgroundColor: ['responsive', 'dark', 'group-hover', 'focus-within', 'hover', 'focus'],

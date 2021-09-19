@@ -8,7 +8,7 @@ export default function SingleEvent(props) {
     const date = event.date.toString().split("-")
     console.log(props.events.startTime);
     return (
-        <div className='bg-gray-100 shadow-sm flex flex-row  xl:justify-evenly justify-between items-between p-6 w-6/12 rounded-2xl h-72 m-6'>
+        <div className='bg-gray-100 shadow-sm flex flex-row  xl:justify-evenly justify-between items-between p-6 w-8/12 rounded-2xl h-72 m-6'>
             <div className='w-0 left  flex  md:w-80 flex-col justify-center items-center'>
                 <img className='rounded-2xl    object-cover h-80' src='https://happifiers-cms-uploads.happify.com/cms_uploads/en_US/img/happifiers/key-to-productivity-1_24c9d0e.jpg'></img>
             </div>
@@ -43,7 +43,7 @@ export default function SingleEvent(props) {
                         <div className='w-1 inline-block'></div>
                         <span className='participant-left font-semibold'>{event.slots - event.participants.length}</span>
                     </div>
-                    <div className='price font-bold'>Price: Rs {event.price}</div>
+                    <div className='price font-bold'>Price: $ {event.price}</div>
                 </div>
             </div>
         </div>

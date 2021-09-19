@@ -4,6 +4,7 @@ import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { AnnotationIcon, GlobeAltIcon, LightningBoltIcon, ScaleIcon } from '@heroicons/react/outline'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import { Link } from 'react-router-dom';
 
 
 
@@ -31,7 +32,7 @@ function lpage() {
                       <span className="sr-only">Workflow</span>
                       <img
                         className="h-8 w-auto sm:h-10"
-                        src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                        src=""
                       />
                     </a>
                     <div className="-mr-2 flex items-center md:hidden">
@@ -42,16 +43,7 @@ function lpage() {
                     </div>
                   </div>
                 </div>
-                {/* <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
-                  {navigation.map((item) => (
-                    <a key={item.name} href={item.href} className="font-medium text-gray-500 hover:text-gray-900">
-                      {item.name}
-                    </a>
-                  ))}
-                  <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
-                    Log in
-                  </a>
-                </div> */}
+                
               </nav>
             </div>
 
@@ -84,17 +76,7 @@ function lpage() {
                       </Popover.Button>
                     </div>
                   </div>
-                  {/* <div className="w-screen px-2 pt-2 pb-3 space-y-1">
-                    {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-                      >
-                        {item.name}
-                      </a>
-                    ))}
-                  </div> */}
+                 
                   <a
                     href="#"
                     className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100"
@@ -115,16 +97,29 @@ function lpage() {
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                 Here you  can register for different events of your choice and can organise your own events. 
               </p>
+              <div className='flex flex-row'>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <div className="rounded-md sm:ml-3">
-                  <a
-                    href="#"
-                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
+                  <Link
+                    to='/home'
+                    className="w-full flex items-center  hover:scale-105 shadow-md justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
                   >
                     Explore Events
-                  </a>
+                  </Link>
                 </div>
               </div>
+              <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                <div className="rounded-md sm:ml-3">
+                  <Link
+                    to='/create'
+                    className="w-full flex items-center hover:scale-105 shadow-md justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 md:py-4 md:text-lg md:px-10"
+                  >
+                    HOST MY EVENT
+                  </Link>
+                </div>
+              </div>
+              </div>
+             
             </div>
           </main>
         </div>
@@ -133,7 +128,7 @@ function lpage() {
       <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
         <img
       
-          className="h-90 w-full  sm:h-72 md:h-96 lg:w-full "
+          className="h-90 w-full object-cover lg:h-full  sm:h-72 md:h-96 lg:w-full "
           src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2019/05/animated-logos.jpg?auto=format&q=60&w=1860&h=1090&fit=crop&crop=faces"
           alt=""
         />

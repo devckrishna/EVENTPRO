@@ -33,9 +33,9 @@ export default function LoginScreen({ history, location }) {
     });
   };
   return (
-    <div className="h-screen bg-gradient-to-r from-purple-600 via-indigo-400 to-purple-500" >
+    <div className="h-full  -mb-28 pb-10 bg-gradient-to-r from-purple-600 via-indigo-400 to-purple-500" >
       <header className="max-w-lg mx-auto py-4">
-        <h1 className="text-4xl font-bold text-white text-center">Login</h1>
+        <h1 className="text-4xl font-bold text-white text-center">Sign up</h1>
       </header >
 
       <main className="bg-white max-w-lg mx-auto p-8 md:p-12 my-10 rounded-lg shadow-2xl">
