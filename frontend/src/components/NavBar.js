@@ -1,8 +1,22 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom'
+import { logout } from '../actions/userActions';
+
 
 export default function NavBar() {
-  let isUserLoggedIn = false;
+  const dispatch = useDispatch();
+  const userLogin = useSelector((state) => {
+    // console.log(state)
+    return state.userLogin
+  });
+  const { userInfo } = userLogin;
+  console.log(userLogin)
+
+  const logoutHandler = () => {
+    dispatch(logout());
+  };
+  let isUserLoggedIn = userInfo != null;
   return (
     <nav className="bg-white shadow-lg dark:bg-gray-800 p-3 sticky" >
       <div
@@ -10,11 +24,13 @@ export default function NavBar() {
       >
         <div className="flex items-center justify-between">
           <div>
-            <h1
+            <Link to='/' ><h1
               className="text-xl font-bold text-gray-800 dark:text-white md:text-2xl hover:text-gray-700 dark:hover:text-gray-300"
               href="#"
             >EventPro</h1
             >
+            </Link>
+
           </div>
 
           <div className="flex md:hidden">
@@ -35,11 +51,11 @@ export default function NavBar() {
 
         <div className="items-center md:flex">
           <div className="flex flex-col md:flex-row md:mx-6">
-            <Link to="/home"
+            <Link to="/"
               className="my-1 text-gray-700 dark:text-gray-200 hover:text-indigo-500 dark:hover:text-indigo-400 md:mx-4 md:my-0"
               href="#"
             >Home </Link>
-            <Link to="/" href='#' className="my-1 text-gray-700 dark:text-gray-200 hover:text-indigo-500 dark:hover:text-indigo-400 md:mx-4 md:my-0">Events</Link>
+            <Link to="/home" href='#' className="my-1 text-gray-700 dark:text-gray-200 hover:text-indigo-500 dark:hover:text-indigo-400 md:mx-4 md:my-0">Events</Link>
 
 
 
@@ -49,13 +65,20 @@ export default function NavBar() {
                   className="my-1 text-gray-700 dark:text-gray-200 hover:text-indigo-500 dark:hover:text-indigo-400 md:mx-4 md:my-0"
                   href="#">
                   <button
+                    onClick={logoutHandler}
                     class="bg-red-500 text-white active:bg-red-600 font-bold uppercase text-xs px-4 py-2 rounded-full shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button">
                     logout
                   </button>
                 </Link>
-                :
-                <Link to="/login"
+                : <div></div>
+
+            }
+
+
+            {
+              isUserLoggedIn ?
+                <Link href='#' className="my-2.5 text-gray-700 dark:text-gray-200 text-4xl md:mx-4 md:my-0"><i class="fas fa-user-circle -my-3.5"></i></Link> : <Link to="/login"
                   className="my-1 text-gray-700 dark:text-gray-200 hover:text-indigo-500 dark:hover:text-indigo-400 md:mx-4 md:my-0"
                   href="#">
                   <button
@@ -64,12 +87,8 @@ export default function NavBar() {
                     Login / SignUp
                   </button>
                 </Link>
+
             }
-
-
-
-            <Link href='#' className="my-2.5 text-gray-700 dark:text-gray-200 text-4xl md:mx-4 md:my-0"><i class="fas fa-user-circle -my-3.5"></i></Link>
-
 
           </div>
         </div>

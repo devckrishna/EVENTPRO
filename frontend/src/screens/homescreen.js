@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { listEvents } from '../actions/eventActions';
-import Card from "../components/Card"
-import EventPageHeader from '../components/EventPageHeader';
 import SingleEvent from "../components/SingleEvent"
 
 export default function HomeScreen() {
@@ -15,31 +13,21 @@ export default function HomeScreen() {
   const { events, loading } = data;
   // const { userInfo } = user;
   // console.log(userInfo.email)
-  if (events.data != null) {
-    console.log(events.data)
-  }
   useEffect(() => {
     dispatch(listEvents());
   }, [dispatch]);
   return (
-    // <div className="flex h-screen">{
-    //   events.data == null ? <img className="m-auto h-24" src="loading.gif" /> : events.data.map((data) => (
-    //     <div>{data.name}</div>
-    //   ))
-    // }
-    // </div>
     <>
-      <EventPageHeader />
-      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-">
-        <SingleEvent />
-        <SingleEvent />
-        <SingleEvent />
-        <SingleEvent />
-        <SingleEvent />
-        <SingleEvent />
-        <SingleEvent />
-        <SingleEvent />
-        <SingleEvent />
+      <div className="flex justify-center">
+        <h1>events</h1>
+      </div>
+      <div className="flex flex-col items-center">
+        {
+          events.data != null ? events.data.map((data) => {
+
+            return <SingleEvent events={data} />
+          }) : <img className="m-auto h-24" src="loading.gif" />
+        }
       </div>
     </>
   )

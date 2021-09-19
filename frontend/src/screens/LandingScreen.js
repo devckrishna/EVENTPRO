@@ -1,42 +1,11 @@
+
 import React from 'react';
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { AnnotationIcon, GlobeAltIcon, LightningBoltIcon, ScaleIcon } from '@heroicons/react/outline'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
-const navigation = [
-  { name: 'Product', href: '#' },
-  { name: 'Features', href: '#' },
-  { name: 'Marketplace', href: '#' },
-  { name: 'Company', href: '#' },
-]
 
-const features = [
-  {
-    name: 'Competitive exchange rates',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: GlobeAltIcon,
-  },
-  {
-    name: 'No hidden fees',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: ScaleIcon,
-  },
-  {
-    name: 'Transfers are instant',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: LightningBoltIcon,
-  },
-  {
-    name: 'Mobile notifications',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: AnnotationIcon,
-  },
-]
 
 function lpage() {
   return (
@@ -73,7 +42,7 @@ function lpage() {
                     </div>
                   </div>
                 </div>
-                <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
+                {/* <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
                   {navigation.map((item) => (
                     <a key={item.name} href={item.href} className="font-medium text-gray-500 hover:text-gray-900">
                       {item.name}
@@ -82,7 +51,7 @@ function lpage() {
                   <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
                     Log in
                   </a>
-                </div>
+                </div> */}
               </nav>
             </div>
 
@@ -115,7 +84,7 @@ function lpage() {
                       </Popover.Button>
                     </div>
                   </div>
-                  <div className="w-screen px-2 pt-2 pb-3 space-y-1">
+                  {/* <div className="w-screen px-2 pt-2 pb-3 space-y-1">
                     {navigation.map((item) => (
                       <a
                         key={item.name}
@@ -125,7 +94,7 @@ function lpage() {
                         {item.name}
                       </a>
                     ))}
-                  </div>
+                  </div> */}
                   <a
                     href="#"
                     className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100"
@@ -140,12 +109,11 @@ function lpage() {
           <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
             <div className="sm:text-center lg:text-left">
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                <span className="block xl:inline">Data to enrich your</span>{' '}
-                <span className="block text-indigo-600 xl:inline">online business</span>
+                <span className="block xl:inline">Platform to enrich </span>{' '}
+                <span className="block text-indigo-600 xl:inline">you & your events</span>
               </h1>
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-                fugiat veniam occaecat fugiat aliqua.
+                Here you  can register for different events of your choice and can organise your own events. 
               </p>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <div className="rounded-md sm:ml-3">
@@ -160,41 +128,13 @@ function lpage() {
             </div>
           </main>
         </div>
-        <div className="py-5 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="lg:text-center">
-              <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">Transactions</h2>
-              <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                A better way to send money
-              </p>
-              <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-                Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in
-                accusamus quisquam.
-              </p>
-            </div>
-
-            <div className="mt-10">
-              <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-                {features.map((feature) => (
-                  <div key={feature.name} className="relative">
-                    <dt>
-                      <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                        <feature.icon className="h-6 w-6" aria-hidden="true" />
-                      </div>
-                      <p className="ml-16 text-lg leading-6 font-medium text-gray-900">{feature.name}</p>
-                    </dt>
-                    <dd className="mt-2 ml-16 text-base text-gray-500">{feature.description}</dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
-          </div>
-        </div>
+        
       </div>
       <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
         <img
-          className="h-90 w-full object-cover sm:h-72 md:h-96 lg:w-full"
-          src="two.jpg"
+      
+          className="h-90 w-full  sm:h-72 md:h-96 lg:w-full "
+          src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2019/05/animated-logos.jpg?auto=format&q=60&w=1860&h=1090&fit=crop&crop=faces"
           alt=""
         />
       </div>
@@ -203,3 +143,4 @@ function lpage() {
 }
 
 export default lpage;
+
