@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import DayPicker from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
-
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, Redirect } from "react-router-dom";
@@ -76,18 +75,24 @@ function AddEvent() {
                         <input onChange={(e) => setTitle(e.target.value)} placeholder='Event title' className='text-gray-900 bg-gray-100 p-1.5 title rounded '></input>
                         <div className='p-1 text-gray-900 font-bolder'>Description</div>
                         <input onChange={(e) => setDescription(e.target.value)} placeholder='Description' rows="5" cols="10" wrap="soft" className='text-gray-900 description leading-2 bg-gray-100 p-1.5 title rounded outline-none'></input>
-                    </div>
+                    </div >
+                    <div className='flex relative flex-col   rounded-xl py-5 justify-start  shadow-md mx-auto p-2   '>
+                        <div className='p-1 text-gray-900 font-bolder'>Meeting I'd</div>
+                        <input onChange={(e) => setMeetingId(e.target.value)} placeholder='Automatic generated' className='text-gray-900 bg-gray-100 p-1.5 title rounded outline-none '></input>
+                        <Link to={{ pathname: "https://meet.google.com/" }} target="_blank">
+                            <button class="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-5/12 rounded-full">
+                                Generate
+                            </button></Link>
 
                     </div>
 
-                </div>
+                </div >
                 <div> <div className='flex relative flex-col   rounded-xl py-5 justify-start  shadow-md mx-auto p-2  '>
                     <div className='p-1 text-gray-700 font-semibold'>Start Time</div>
                     <input type='time' className='rounded' onChange={(e) => setStart(e.target.value)}></input>
                     <div className='p-1 text-gray-700 font-semibold' >End Time</div>
                     <input type='time' className='rounded' onChange={(e) => setEnd(e.target.value)}></input>
                 </div>
-
 
 
                     <div className='flex relative flex-col   rounded-xl py-5 justify-start  shadow-md mx-auto p-2  '>
@@ -134,17 +139,9 @@ function AddEvent() {
                     />
                 </div> </div>
 
+            </div >
 
-                </div>
-
-
-                <button style={styles.CreateEventBtn} className='text-lg font-semibold mt-8 hover:bg-red-800 rounded-full uppercase h-14'>Create My Event</button></div>
-                    :<MyModal></MyModal>
-                }
-
-            </div>
-
-            <button onClick={() => registerEvent()} style={styles.CreateEventBtn} className=' text-lg font-semibold uppercase h-14 w-6/12'>Create My Event</button>
+            <button onClick={() => registerEvent()} style={styles.CreateEventBtn} className=' text-lg text-white  rounded-full font-semibold uppercase h-14 w-6/12'>Create My Event</button>
 
 
             <>
@@ -211,7 +208,7 @@ function AddEvent() {
                     </Dialog>
                 </Transition>
             </>
-        </div>
+        </div >
     );
 }
 
@@ -219,7 +216,6 @@ const styles = {
     CreateEventBtn: {
         backgroundColor: '#8B5CF6',
     }
-
 }
 
 

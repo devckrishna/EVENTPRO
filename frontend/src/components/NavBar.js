@@ -51,11 +51,8 @@ export default function NavBar() {
 
         <div className="items-center md:flex">
           <div className="flex flex-col md:flex-row md:mx-6">
-          <Link to="/create"
-              className="my-1 text-gray-700 dark:text-gray-200 hover:text-indigo-500 font-bold uppercase dark:hover:text-indigo-400 md:mx-4 md:my-0"
-              href="#"
-            >Host My Event </Link>
-            
+
+
             <Link to="/"
               className="my-1 text-gray-700 dark:text-gray-200 hover:text-indigo-500 dark:hover:text-indigo-400 md:mx-4 md:my-0"
               href="#"
@@ -82,22 +79,8 @@ export default function NavBar() {
 
 
             {
-              isUserLoggedIn ?
-                <Link href='#' className="my-2.5 text-gray-700 dark:text-gray-200 text-4xl md:mx-4 md:my-0"><i class="fas fa-user-circle -my-3.5"></i></Link> : <Link to="/login"
-                  className="my-1 text-gray-700 dark:text-gray-200 hover:text-indigo-500 dark:hover:text-indigo-400 md:mx-4 md:my-0"
-                  href="#">
-                  <button
-                    class="bg-purple-500 text-white active:bg-purple-600 font-bold uppercase text-xs px-4 py-2 rounded-full shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                    type="button">
-                    Login / SignUp
-                  </button>
-                </Link>
 
             }
-             <Link to="/events"
-              className="my-1 text-gray-700 dark:text-gray-200 hover:text-gray-800 dark:hover:text-indigo-400 md:mx-4 md:my-0"
-              href="#"
-            ><i class="far text-3xl fa-user-circle"></i> </Link>
 
           </div>
         </div>

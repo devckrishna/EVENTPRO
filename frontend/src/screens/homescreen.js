@@ -9,19 +9,16 @@ export default function HomeScreen() {
   const data = useSelector((state) => state.eventList);
 
   const { events, loading } = data;
-  
+
   useEffect(() => {
     dispatch(listEvents());
   }, [dispatch]);
   return (
     <>
-      
+
       <div className="flex justify-center">
-    
+
       </div>
-      <Link to="/create">
-        <button>create</button>
-      </Link>
       <div className="flex flex-col items-center">
         {
           events.data != null ? events.data.map((data) => {

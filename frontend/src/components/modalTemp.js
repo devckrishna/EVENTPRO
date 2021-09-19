@@ -64,37 +64,36 @@ export default function MyModal() {
                 <Dialog.Title
                   as="h3"
                   className="text-lg font-medium leading-6 text-gray-900"
-                   >
-                 <div className='flex flex-col'>
-                   {/* <i class="fas fa-check-circle text-3xl text-green-500"></i> */}
-                     <span>Oops!! you don't have an account</span>
-                 </div>
+                >
+                  <div className='flex flex-col'>
+                    {/* <i class="fas fa-check-circle text-3xl text-green-500"></i> */}
+                    <span>Resgister?</span>
+                  </div>
                 </Dialog.Title>
                 <div className="mt-2 flex flex-col">
-               
+
                   <p className="text-sm text-gray-500">
-                    Please Sign in to your account to host an event.
+                    Are You Sure You Want To Register For This Event?
                   </p>
                 </div>
 
                 <div className="mt-4  flex flex-row justify-between">
-                    <Link to='/login'>
+                  <Link to='/'>
                     <button
-                    type="button"
-                    className="inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-purple-500 border border-transparent rounded-md hover:bg-purple-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
-                  >
-                    Sign In
-                  </button></Link>
-                    
-                   <Link to='/'>
-                   <button
-                    type="button"
-                    className="inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-gray-500 border border-transparent rounded-md hover:bg-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
-                   
-                  >
-                    No Thanks
-                  </button></Link> 
-                  
+                      type="button"
+                      className="inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-purple-500 border border-transparent rounded-md hover:bg-purple-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
+                    >
+                      Register
+                    </button></Link>
+
+                  <Link to='/'>
+                    <button
+                      type="button"
+                      className="inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-gray-500 border border-transparent rounded-md hover:bg-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
+                    >
+                      Cancel
+                    </button></Link>
+
                 </div>
               </div>
             </Transition.Child>
