@@ -15,7 +15,6 @@ import HomeScreen from "./screens/HomeScreen";
 import AddEvent from "./screens/AddEvent";
 import RegisteredEvents from "./screens/RegisteredEvents";
 
-
 function App() {
   const [isOpen, setIsOpen] = useState(false);
 
